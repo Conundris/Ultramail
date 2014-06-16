@@ -96,6 +96,13 @@ public class UltraMailGUIController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
     
     }
+<<<<<<< HEAD
+=======
+    
+    private void searchNameAdress() {
+        
+    }
+>>>>>>> e5ef8c58b5df6beeaf7fa4903dfcd0dd33a43d3e
 
 }
 
