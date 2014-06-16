@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 /**
  *
  * @author b7kohll
- */
+*/
 public class UltraMail extends Application {
     
 //    public static Stage stage;
@@ -32,6 +32,8 @@ public class UltraMail extends Application {
         stage.setScene(new Scene (mainScene));
         stage.setTitle("Ultra Mail");
         stage.show();
+        
+        WindowController test = new WindowController
     }
 
     /**
