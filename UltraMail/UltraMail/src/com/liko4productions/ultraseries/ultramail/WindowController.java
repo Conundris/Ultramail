@@ -17,10 +17,10 @@ public class WindowController {
     {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxml));
         
-        AnchorPane scene = (AnchorPane)fxmlLoader.load();
+        //AnchorPane scene = (AnchorPane)fxmlLoader.load();
         controller = (UltraMailGUIController) fxmlLoader.getController();
        
-        stage.setScene(new Scene(scene));
+        stage.setScene(scene);
         stage.setTitle(title);
         stage.show();
         
