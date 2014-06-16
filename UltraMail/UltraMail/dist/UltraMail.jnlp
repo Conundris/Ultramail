@@ -12,14 +12,10 @@
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
 <<<<<<< HEAD
-    <jar href="UltraMail.jar" size="23553" download="eager" />
-=======
-<<<<<<< HEAD
     <jar href="UltraMail.jar" size="40280" download="eager" />
 =======
     <jar href="UltraMail.jar" size="23556" download="eager" />
 >>>>>>> e5ef8c58b5df6beeaf7fa4903dfcd0dd33a43d3e
->>>>>>> origin/master
   </resources>
 <security>
   <all-permissions/>

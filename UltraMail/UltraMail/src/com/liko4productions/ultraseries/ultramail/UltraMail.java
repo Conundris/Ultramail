@@ -33,7 +33,6 @@ public class UltraMail extends Application {
         stage.setTitle("Ultra Mail");
         stage.show();
         
-        WindowController test = new WindowController
     }
 
     /**
