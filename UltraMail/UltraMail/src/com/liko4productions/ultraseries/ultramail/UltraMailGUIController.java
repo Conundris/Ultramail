@@ -97,7 +97,9 @@ public class UltraMailGUIController implements Initializable {
     
     }
     
-    
+    private void searchNameAdress() {
+        
+    }
 
 }
 
