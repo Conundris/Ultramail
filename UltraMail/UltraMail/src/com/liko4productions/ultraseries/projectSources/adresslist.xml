@@ -7,7 +7,7 @@ and open the template in the editor.
 
 
 <root>
-    <anreden>
+    <user id="">
         <adresse name="" vorname="" spitzname="" geschlecht="" beziehungsstatus=""></adresse>
-    </anreden>
+    </user>
 </root>
