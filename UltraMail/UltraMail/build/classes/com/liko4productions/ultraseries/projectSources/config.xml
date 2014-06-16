@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<root>
+    <configset language="ger">
+        <anrede>
+            <stufe5>Sehr geehrte Damen und Herren</stufe5>
+            <stufe4>Guten Tag %Geschlecht</stufe4>
+            <stufe3>Guten Tag %Geschlecht</stufe3>
+            <stufe2>Hallo</stufe2>
+            <stufe1>Hey</stufe1>
+        </anrede>
+        <grussformel>
+            <stufe5>Freundliche Grüsse</stufe5>
+            <stufe4>Viele Grüsse</stufe4>
+            <stufe3>Viele Grüsse</stufe3>
+            <stufe2>Gruess</stufe2>
+            <stufe1>Liebe dich</stufe1>
+        </grussformel>
+        <anhang>Die Datei befindet sich im Anhang.</anhang>
+        <kenntnisnahme>Bitte nehmen Sie die folgenden Informationen zur Kenntnis</kenntnisnahme>
+        <erwarteAntwort>Vielen Dank für Ihre Antwort.</erwarteAntwort>
+    </configset>
+</root>

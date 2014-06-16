@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package com.liko4productions.ultraseries.ultramail;
 
 import java.net.URL;
@@ -15,17 +9,12 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.web.HTMLEditor;
+import javafx.stage.Stage;
 
-/**
- *
- * @author b7kohll
- */
 public class UltraMailGUIController implements Initializable {
-    
-    //Variablendeklarationen
+    // Ultramail.fxml
+ //Variablendeklarationen
     private String mailText = "";
-    private String namePart1 = "";
-    private String namePart2 = "";
     private String yourName = "Linus Kohler";
     
     @FXML
@@ -50,6 +39,15 @@ public class UltraMailGUIController implements Initializable {
     private CheckBox cBoxAsInformation;
       
     @FXML
+    private void showSettings() throws Exception
+    {
+        WindowController test2 = new WindowController();
+        Stage stage = new Stage();
+        test2.addWindow(stage, "Settings.fxml", "Settings");
+        
+    }
+    
+      @FXML
     private void generateMail(ActionEvent event) {
         
         //Start und Konfigurationen
@@ -57,10 +55,7 @@ public class UltraMailGUIController implements Initializable {
         lblInfo.setText("Generierung läuft...");
         
         //Setze den Namen und die Begrüssungsformel des Mail-Empfängers
-        namePart1 = txtFieldAdress.getText();
-        namePart2 = txtFieldAdress.getText();
-        
-        mailText = "Hallo " + namePart1 + "<br><br>";
+        mailText = getGreeting(txtFieldAdress.getText());
         
         //Abfrage ob "Zur Kenntnisnahme" angeklick
         if (cBoxAsInformation.isSelected()) {
@@ -68,7 +63,7 @@ public class UltraMailGUIController implements Initializable {
         }
         
         //Den Betreff auslesen
-        mailText = mailText + txtFieldSubject.getText() + "<br>";
+        mailText = mailText + txtFieldSubject.getText() + "<br><br>";
         
         //Abfrage ob "Anhang" angeklick
         if (cBoxAttachment.isSelected()) {
@@ -85,6 +80,7 @@ public class UltraMailGUIController implements Initializable {
         mailText = mailText + yourName;
         
         //Mail generieren
+        mailText = "<p style=\"font-family:Calibri;\">" + mailText + "</p>";
         mailEditor.setHtmlText(mailText);
         
         //Abschlusskonfigurationen
@@ -97,10 +93,26 @@ public class UltraMailGUIController implements Initializable {
     
     }
     
-    private String getGreeting() {
+    private String getGreeting(String eingabe) {
+        String output = "";
         
+        if (eingabe.contains("@")) {
+            String vorname = eingabe.substring(0, eingabe.indexOf("."));
+            String nachname = eingabe.substring(eingabe.indexOf(".") + 1, eingabe.indexOf("@"));
+        }
         
-        return "test";
+        return output + "<br><br>";
+    }
+    
+    private AdressListRecord searchAdressList(String name1, String name2, String adresse) {
+        AdressListRecord adressRecord = new AdressListRecord();
+        adressRecord.Adresse = "yannik.beimler@ebcom.ch";
+        adressRecord.Beziehung = "Guten Tag %Geschlecht";
+        adressRecord.Vorname = "Yannik";
+        adressRecord.Geschlecht = "Beimer";
+        adressRecord.Spitzname = "Stubii";
+        adressRecord.Grussformel = "Viele Grüsse";
+        return adressRecord;
     }
 
 }

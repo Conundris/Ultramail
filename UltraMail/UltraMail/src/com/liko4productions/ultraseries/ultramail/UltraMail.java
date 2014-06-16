@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package com.liko4productions.ultraseries.ultramail;
 
 import javafx.application.Application;
@@ -12,10 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-/**
- *
- * @author b7kohll
-*/
 public class UltraMail extends Application {
     
 //    public static Stage stage;
@@ -24,14 +14,17 @@ public class UltraMail extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("UltraMailGUI.fxml"));
+       /* FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("UltraMailGUI.fxml"));
         
         AnchorPane mainScene = (AnchorPane)fxmlLoader.load();
         controller = (UltraMailGUIController) fxmlLoader.getController();
        
         stage.setScene(new Scene (mainScene));
         stage.setTitle("Ultra Mail");
-        stage.show();
+        stage.show();*/
+        
+        WindowController test = new WindowController();
+        test.addWindow(stage, "UltraMailGUI.fxml", "Ultra Mail");
         
     }
 

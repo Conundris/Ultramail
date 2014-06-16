@@ -7,7 +7,13 @@ and open the template in the editor.
 
 
 <root>
-    <user id="">
-        <adresse name="" vorname="" spitzname="" geschlecht="" beziehungsstatus=""></adresse>
+    <user>
+        <id>1</id>
+        <adresse>max.muster@mustermail.com</adresse>
+        <name>Muster</name>
+        <vorname>Max</vorname>
+        <spitzname>Maxi</spitzname>
+        <geschlecht>Herr</geschlecht>
+        <beziehungsstatus>stufe2</beziehungsstatus>
     </user>
 </root>
